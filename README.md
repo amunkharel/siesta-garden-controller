@@ -13,3 +13,6 @@ The SGC system is created by the B-STACK team (CS 460 T03)
 - Amun Kharel
 - Cody Crane
 - Krista Conley
+
+## Run Code
+Compile and run src/SGC/SGC.java
