@@ -1,0 +1,83 @@
+#mainGrid {
+    -fx-background-color: #ffffff;  
+}
+
+#menuVBox {
+    -fx-background-color: #ffffff;
+}
+
+/* Accordians */
+.accordianPanes > .title {
+    -fx-background-color: #ffffff;
+    -fx-border-color: transparent transparent #bbbbbb transparent;
+    -fx-border-width: 0 0 0.125em 0;
+    -fx-padding: 1em;
+    -fx-font-size: 1.25em;
+    -fx-font-family:Arial, Helvetica, sans-serif;
+    -fx-font-weight: bold;
+    -fx-color: #dddddd;
+}
+
+.accordianPanes > .title > .text {
+    -fx-fill: #444444;
+}
+
+.accordianPanes:expanded > .title {
+    -fx-background-color: #1e9dff;
+    -fx-border-width: 0 0 0 0;
+}
+
+.accordianPanes:expanded > .title > .text {
+    -fx-fill: #ffffff;
+}
+
+.accordianPanes VBox { 
+    -fx-background-color: #ffffff;
+}
+
+/* Buttons */
+.button {
+    -fx-background-color: #1e9dff;
+    -fx-padding: 0.5em;
+    -fx-pref-width: 20em;
+    -fx-cursor: hand;
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.3), 7, 0.0, 0.0, 0.0)
+}
+
+.button:hover {
+    /* -fx-background-color: #1c84d3; */
+    -fx-effect: dropshadow(gaussian, rgba(0, 0, 0, 0.6), 10, 0.0, 0.0, 0.0)
+}
+
+.button > .text {
+    -fx-fill: #ffffff;
+    -fx-font-weight: bold;
+    -fx-text-transform: capitalize;
+}
+
+
+/* Table */
+#statusTable > Rectangle {
+    -fx-background-color: #dddddd;
+
+}
+
+#statusTable {
+    -fx-padding: 0.75em;
+}
+
+#statusTable .table-header {
+    -fx-font-size: 14px;
+    -fx-font-weight: bold;
+}
+
+
+/* Scroll Bars */
+.scroll-bar:vertical{
+    -fx-pref-width: 0.5em;
+}
+
+.scroll-bar:vertical .thumb {
+    -fx-background-color: #27272765;
+    -fx-background-insets: none;
+}

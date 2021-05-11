@@ -1,0 +1,22 @@
+## Path points. Starting at the Main parking
+(col, row)
+Main parking: 50 30
+Token Kiosk: 73 37
+Loading Dock: 84 38
+Dino Viewing: 20 50
+Dino Parking: 24 35
+
+Path Starting by the main parking
+61 17
+60 40 (loading Area)
+70 62
+90 80
+57 84
+37 63
+19 62
+Dino Viewing
+Dino Parking
+13 21
+18 13
+36 6
+50 19

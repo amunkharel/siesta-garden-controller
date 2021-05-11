@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Text?>
+<GridPane id="mainGrid" alignment="CENTER" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" stylesheets="@style.css" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="SGC.GUIController">
+   <columnConstraints>
+      <ColumnConstraints halignment="LEFT" hgrow="NEVER" percentWidth="34.0" />
+      <ColumnConstraints percentWidth="66.0" />
+   </columnConstraints>
+   <rowConstraints>
+      <RowConstraints valignment="TOP" />
+   </rowConstraints>
+   <children>
+      <VBox id="menuVBox" prefHeight="543.0" prefWidth="264.0" GridPane.halignment="LEFT" GridPane.hgrow="ALWAYS" GridPane.valignment="BASELINE" GridPane.vgrow="ALWAYS">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" pickOnBounds="true" preserveRatio="true" VBox.vgrow="NEVER">
+               <image>
+                  <Image url="@img/B-STACK-logo.png" />
+               </image>
+               <VBox.margin>
+                  <Insets bottom="15.0" left="15.0" right="15.0" top="15.0" />
+               </VBox.margin>
+            </ImageView>
+            <Accordion maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
+              <panes>
+                <TitledPane styleClass="accordianPanes" text="Simulation Controls">
+                     <content>
+                        <VBox prefHeight="200.0" prefWidth="100.0" spacing="10.0">
+                           <children>
+                              <Button id="guestsArrive" mnemonicParsing="false" text="Guests Arrive" />
+                              <Button id="triggerCriticalEvent" mnemonicParsing="false" text="Trigger Critical Event" />
+                              <Button id="triggerAlarm" mnemonicParsing="false" text="Trigger Alarm" />
+                           </children>
+                        </VBox>
+                     </content>
+                </TitledPane>
+                <TitledPane prefHeight="759.0" prefWidth="264.0" styleClass="accordianPanes" text="Status Table">
+                     <content>
+                        <ScrollPane hbarPolicy="NEVER" prefHeight="605.0" prefWidth="154.0" vbarPolicy="ALWAYS">
+                           <content>
+                              <GridPane id="statusTable" hgap="5" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="90.0" prefWidth="273.0" vgap="15">
+                                <columnConstraints>
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                  <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                    <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                                </columnConstraints>
+                                <rowConstraints>
+                                  <RowConstraints minHeight="25.0" prefHeight="25.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                  <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                                </rowConstraints>
+                                 <children>
+<!--                                    <Rectangle arcHeight="5.0" arcWidth="5.0" fill="#e1e1e1" height="35.0" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0" width="276.0" />-->
+                                     <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="table-header" text="Device" GridPane.valignment="CENTER" />
+                                     <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="table-header" text="Status" GridPane.columnIndex="1" GridPane.vgrow="ALWAYS" />
+                                     <Text strokeType="OUTSIDE" strokeWidth="0.0" styleClass="table-header" text="Updated" GridPane.columnIndex="2" GridPane.vgrow="ALWAYS" />
+                                 </children>
+                              </GridPane>
+                           </content>
+                        </ScrollPane>
+                     </content>
+                </TitledPane>
+                <TitledPane prefHeight="381.0" prefWidth="264.0" styleClass="accordianPanes" text="Operator Requests">
+                     <content>
+                        <VBox prefHeight="200.0" prefWidth="100.0" spacing="10.0">
+                           <children>
+                              <Button id="playAnnouncement" mnemonicParsing="false" text="Play Announcement" />
+                              <Button id="de-escalate" disable="true" mnemonicParsing="false" text="De-escalate Emergency" />
+                              <Button id="evacuate" disable="true" mnemonicParsing="false" text="Begin Evecuation" />
+                           </children>
+                        </VBox>
+                     </content>
+                </TitledPane>
+              </panes>
+            </Accordion>
+         </children>
+      </VBox>
+      <AnchorPane id="simulationPane" prefHeight="200.0" prefWidth="200.0" GridPane.columnIndex="1">
+         <children>
+            <ImageView fitHeight="640.0" fitWidth="532.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@img/map.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+   </children>
+</GridPane>
